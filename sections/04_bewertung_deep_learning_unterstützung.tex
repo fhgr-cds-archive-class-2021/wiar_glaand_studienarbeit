@@ -1,10 +1,21 @@
 \section{Bewertung von Deep Learning als Unterstützung}
 
 \subsection{Anwendung von Deep Learning in der Strömungsdynamik}
-Lorem Ipsum
+Die Diskussion über die Anwendung des maschinellen Lernens (ML) in der Fluiddynamik betont die Herausforderungen und Chancen, wobei die Einbindung von Fachwissen und die Berücksichtigung der spezifischen Komplexität von Fluidströmungen im Mittelpunkt stehen \parencite{bruntonMachineLearningFluid2020}. Dabei wird die Notwendigkeit von Interpretierbarkeit, Generalisierbarkeit und Erklärbarkeit von ML-Ergebnissen betont, ebenso wie die Chance der Hybridisierung datengesteuerter und erster prinzipieller Ansätze in der Strömungsmechanik.
+
+Ein vielversprechender Ansatz besteht darin, \textquotedbl{hybride}\textquotedbl{} Modelle zu verwenden, die das Beste aus ML und traditionellen numerischen Methoden kombinieren \parencite{kochkovMachineLearningAccelerated2021}. Diese Modelle korrigieren Fehler in unteraufgelösten Simulationen mithilfe von ML und setzen auf datengesteuerte Diskretisierungen, um hochgenaue Differentialoperatoren auf groben Netzen zu interpolieren. Dies ermöglicht eine durchgängige, auf Gradienten basierende Optimierung des gesamten Algorithmus, wobei gleichungsspezifische Methoden auf hochauflösenden Ground-Truth-Simulationen basieren.
+
+Eine Diskussion über das wachsende Interesse an Deep-Learning-Methoden in der Fluiddynamik betont die Limitationen aktueller hochmoderner Methoden für CFD \parencite{muralidharPhyFlowPhysicsGuidedDeep2021}. Die Autoren schlagen das Physik-gesteuerte Deep-Learning-Framework PhyFlow vor, um diese Herausforderungen zu bewältigen, indem es die Physik in das Training und die Bewertung von DL-Modellen einbezieht.
+
+Ein weiterer Ansatz nutzt Hidden Fluid Mechanics (HFM), ein physikbasiertes Deep-Learning-Framework, um quantitative Informationen aus Strömungsvisualisierungen zu extrahieren \parencite{raissiHiddenFluidMechanics2020}. HFM codiert die Navier-Stokes-Gleichungen in neuronale Netze und bewältigt niedrige Auflösungen sowie Rauschen in den Beobachtungsdaten, was es für diverse physikalische und biomedizinische Anwendungen geeignet macht.
+
+Ein physikbeschränkter Deep-Learning-Ansatz wird vorgeschlagen, um Flüssigkeitsströme zu modellieren, ohne auf Simulationsdaten zurückzugreifen \parencite{sunSurrogateModelingFluid2020a}. Dieser Ansatz integriert maßgebliche Gleichungen in die Verlustfunktion des neuronalen Netzwerks, um Datenmangel bei parametrischen Fluiddynamikproblemen zu kompensieren, besonders relevant für Luft- und Raumfahrt, Bauwesen und biomedizinische Technik.
 
 \subsection{Übertragbarkeit auf die Druckgleichung}
-Lorem Ipsum
+Die Nutzung datengesteuerter Ansätze im Bereich der Aerodynamik wird durch verschiedene Studien erforscht, wobei Convolutional Neural Networks (CNN) eine zentrale Rolle spielen. In einem Ansatz schlagen die Autoren vor, die Druckverteilung über Tragflächen vorherzusagen, indem sie ein überwachtes CNN-Modell verwenden, trainiert anhand von deformierten Tragflächengeometrien \parencite{huiFastPressureDistribution2020}. Ein anderer Ansatz betont den Einsatz von Deep-Learning-Techniken, insbesondere CNN, zur Lösung der Druckgleichung in Computational Fluid Dynamics (CFD)-Simulationen, um die Ergebnisse von Strömungsfeldern um feste Objekte vorherzusagen \parencite{abucide-armasDataAugmentationBasedTechnique2021}.
 
-\subsection{Bestehenden Ansätzen und ihrer Wirksamkeit}
-Lorem Ipsum
+Die Effizienz von Deep Learning für die Vorhersage instationärer Druckverteilungen wird in einer weiteren Studie betont, wobei ein Deep Convolutional Neural Network auf synthetischen Daten von CFD-Simulationen trainiert wird \parencite{rozovDatadrivenPredictionUnsteady2021}. Die Autoren heben die Fähigkeit hervor, nichtlineare instationäre Aerodynamik für eine gegebene Konfiguration präzise zu erfassen.
+
+Eine detaillierte Untersuchung zur Anwendung von Deep Learning in CFD bezieht sich auf die Vorhersage von Bubbly Flow und betont den Einsatz von Deep Feedforward Neural Networks (DFNN) zur Anpassung der Funktion zwischen Simulationsfehlern und physikalischen Merkmalseingaben \parencite{baoComputationallyEfficientCFD2020}. Hierbei liegt der Fokus auf der Auswahl einer optimalen physikalischen Merkmalsgruppe, um die Vorhersagegenauigkeit bei minimaler Rechenleistung zu gewährleisten.
+
+Eine weitere Herangehensweise zeigt, dass Deep Learning dazu genutzt werden kann, die Lösung partieller Differentialgleichungen (PDEs) in der numerischen Strömungsmechanik (CFD) zu approximieren \parencite{josephMeshBasedNeural2022}. Durch die Integration von Daten aus dem Fluidströmungsfeld in das Training eines tiefen neuronalen Netzwerks kann eine effektive Annäherung an die durch den Satz von PDEs repräsentierte multivariate Funktion erreicht werden.
