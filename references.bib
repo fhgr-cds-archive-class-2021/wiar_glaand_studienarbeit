@@ -655,6 +655,21 @@
   file = {/home/glatzl/Zotero/storage/Y6DIKJWY/Kafle and Kanan - 2017 - Visual question answering Datasets, algorithms, a.pdf;/home/glatzl/Zotero/storage/MY9XEHY2/S1077314217301170.html}
 }
 
+@article{kenwayEffectiveAdjointApproaches2019,
+  title = {Effective Adjoint Approaches for Computational Fluid Dynamics},
+  author = {Kenway, Gaetan K. W. and Mader, Charles A. and He, Ping and Martins, Joaquim R. R. A.},
+  year = {2019},
+  month = oct,
+  journal = {Progress in Aerospace Sciences},
+  volume = {110},
+  pages = {100542},
+  issn = {0376-0421},
+  doi = {10.1016/j.paerosci.2019.05.002},
+  urldate = {2024-01-14},
+  abstract = {The adjoint method is used for high-fidelity aerodynamic shape optimization and is an efficient approach for computing the derivatives of a function of interest with respect to a large number of design variables. Over the past few decades, various approaches have been used to implement the adjoint method in computational fluid dynamics solvers. However, further advances in the field are hindered by the lack of performance assessments that compare the various adjoint implementations. Therefore, we propose open benchmarks and report a comprehensive evaluation of the various approaches to adjoint implementation. We also make recommendations on effective approaches, that is, approaches that are efficient, accurate, and have a low implementation cost. We focus on the discrete adjoint method and describe adjoint implementations for two computational fluid dynamics solvers by using various methods for computing the partial derivatives in the adjoint equations and for solving those equations. Both source code transformation and operator-overloading algorithmic differentiation tools are used to compute the partial derivatives, along with finite differencing. We also examine the use of explicit Jacobian and Jacobian-free solution methods. We quantitatively evaluate the speed, scalability, memory usage, and accuracy of the various implementations by running cases that cover a wide range of Mach numbers, Reynolds numbers, mesh topologies, mesh sizes, and number of CPU cores. We conclude that the Jacobian-free method using source code transformation algorithmic differentiation to compute the partial derivatives is the best option because it computes exact derivatives with the lowest CPU time and the lowest memory requirements, and it also scales well up to 10 million cells and over one thousand CPU cores. The superior performance of this approach is primarily due to its Jacobian-free adjoint strategy. The cases presented herein are publicly available and represent platform-independent benchmarks for comparing other current and future adjoint implementations. Our results and discussion provide a guide for discrete adjoint implementations, not only for computational fluid dynamics but also for a wide range of other partial differential equation solvers.},
+  keywords = {Adjoint methods,Aerodynamic shape optimization,Algorithmic differentiation,Computational fluid dynamics,Discrete adjoint benchmarks,Sensitivity analysis}
+}
+
 @inproceedings{kervadecRosesAreRed2021,
   title = {Roses {{Are Red}}, {{Violets Are Blue}}... but {{Should VQA Expect Them To}}?},
   booktitle = {Proceedings of the {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})},
