@@ -1,14 +1,14 @@
 \section{Einleitung}
 \subsection{Hintergrund}
 \paragraph{Bedeutung der Navier-Stokes Gleichung in der Strömungsdynamik}
-Die Navier-Stokes Gleichung spielt eine zentrale Rolle in der Strömungsdynamik und bietet einen fundamentalen Rahmen zur Beschreibung von Flüssigkeits- und Gasbewegungen. Diese partielle Differentialgleichung, die aus den Gesetzen der Masse- und Impulserhaltung hergeleitet wird, ermöglicht die mathematische Modellierung und Simulation von Strömungen unter verschiedenen Bedingungen. 
+Die Navier-Stokes Gleichung spielt eine zentrale Rolle in der Strömungsdynamik und bietet einen fundamentalen Rahmen zur Beschreibung von Flüssigkeits- und Gasbewegungen. Diese partielle Differentialgleichung, die aus den Gesetzen der Masse- und Impulserhaltung hergeleitet wird, ermöglicht die mathematische Modellierung und Simulation von Strömungen unter verschiedenen Bedingungen. \parencite{simon_schneiderbauer_da8e2d1d}
 
-Die Bedeutung dieser Gleichung liegt in ihrer Fähigkeit, komplexe Strömungsphänomene zu charakterisieren, von laminaren Strömungen in Rohrleitungen bis hin zu turbulenten Wirbeln in der Atmosphäre oder Ozeanen. Durch die Berücksichtigung von Druck, Viskosität und externen Kräften ermöglicht die Navier-Stokes Gleichung die präzise Vorhersage von Strömungsverhalten und -mustern.
+Die Bedeutung dieser Gleichung liegt in ihrer Fähigkeit, komplexe Strömungsphänomene zu charakterisieren, von laminaren Strömungen in Rohrleitungen bis hin zu turbulenten Wirbeln in der Atmosphäre oder Ozeanen. Durch die Berücksichtigung von Druck, Viskosität und externen Kräften ermöglicht die Navier-Stokes Gleichung die präzise Vorhersage von Strömungsverhalten und -mustern. \parencite{p_g_drazin__n_riley_482fe063}
 
-In der Praxis wird die inkompressible Form der Gleichung oft bevorzugt, da sie für viele strömungsrelevante Anwendungen geeigneter ist. Sie gilt insbesondere für Flüssigkeiten oder Gase mit vernachlässigbarer Dichteänderung während der Strömung, was bei vielen realen Szenarien der Fall ist.
+In der Praxis wird die inkompressible Form der Gleichung oft bevorzugt, da sie für viele strömungsrelevante Anwendungen geeigneter ist. Sie gilt insbesondere für Flüssigkeiten oder Gase mit vernachlässigbarer Dichteänderung während der Strömung, was bei vielen realen Szenarien der Fall ist. \parencite{p_g_drazin__n_riley_482fe063}
 
 \paragraph{Herausforderungen bei der Lösung der Navier-Stokes Gleichung}
-Die numerische Lösung der Navier-Stokes Gleichung ist keine triviale Aufgabe. Der Algorithmus besteht aus verschiedenen Schritten, wie der Diskretisierung, der Festlegung von Randbedingungen, der Berechnung des Geschwindigkeitsvektors und der Lösung der Druckgleichung. Die grösste Herausforderung der Gleichung liegt dabei im Lösen der Druckgleichung. Nach jedem Zeitschritt muss diese individuell gelöst werden, wie in der mathematischen Gleichung \ref{eq:poisson_pressure} dargestellt.
+Die numerische Lösung der Navier-Stokes Gleichung ist keine triviale Aufgabe. Der Algorithmus besteht aus verschiedenen Schritten, wie der Diskretisierung, der Festlegung von Randbedingungen, der Berechnung des Geschwindigkeitsvektors und der Lösung der Druckgleichung. Die grösste Herausforderung der Gleichung liegt dabei im Lösen der Druckgleichung. Nach jedem Zeitschritt muss diese individuell gelöst werden, wie in der mathematischen Gleichung \ref{eq:poisson_pressure} dargestellt. \parencite{stefan_turek_3ee2e7b8}
 
 \begin{equation}
 \nabla^2 p = -\frac{\rho}{\nu} \cdot \left(\nabla \cdot \mathbf{u} \right)\label{eq:poisson_pressure}
