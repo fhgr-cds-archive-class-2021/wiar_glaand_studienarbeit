@@ -1,0 +1,54 @@
+\documentclass[
+    fontsize=9pt, 
+    paper=a4, 
+    pagesize, 
+    DIV=calc
+    german,
+    numbers=noenddot,
+    oneside,
+    man,
+    bibliography=totoc,
+    bibtotocnumbered,
+    listof=totoc,
+]{scrartcl}
+\linespread {1}
+
+\input{structure.tex}
+
+\begin{document}
+
+\makeTitlePage{
+    organization={FHGR - Fachhochschule Graubünden},
+    title={Unterstützung der Lösungsfindung der inkompressiblen Navier-Stokes Gleichung mit Deep Learning},
+    type={Studienarbeit},
+    faculty={Computational and Data Science},
+    author={André Glatzl},
+    street={Wachtelweg 15},
+    city={7000 Chur},
+    email={andre.glatzl@stud.fhgr.ch},
+    place={Chur},
+    date={\today},
+    examiner={Vera Husfeldt},
+    module={Wissenschaftliches Arbeiten (cds-9032)},
+    timeperiod={September 2023 bis Januar 2024}
+}
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\input{sections/01_einleitung}
+\input{sections/02_grundlagen}
+\input{sections/03_methodik}
+\input{sections/04_verwandte_arbeiten}
+\input{sections/05_herausforderungen_und_grenzen}
+\input{sections/06_perspektiven_und_zukunftsaussichten}
+\input{sections/07_schlussfolgerungen}
+
+\clearpage
+
+\printbibliography[keyword={verwendet}, title={Literatur}]
+
+\end{document}

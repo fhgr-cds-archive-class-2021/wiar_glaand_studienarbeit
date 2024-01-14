@@ -1,0 +1,95 @@
+\usepackage[english, ngerman]{babel}
+\usepackage[left=3cm,top=2.5cm,right=2.5cm,bottom=2.cm]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage{xparse}
+\usepackage{csquotes}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[affil-it]{authblk} 
+\usepackage{apacite}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{todonotes}
+\usepackage{parskip}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{afterpage}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{apacite}
+\bibliographystyle{apacite}
+\lstset{literate=%
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+}
+\usepackage[style=apa, citetracker=true, maxcitenames=1, backend=biber]{biblatex}
+\DeclareLanguageMapping{german}{german-apa}
+\addbibresource{literature.bib}
+\nocite{*} % damit nicht zitiert werden MUSS damit die Literatur im Verzeichnis erscheint
+\BiblatexSplitbibDefernumbersWarningOff % gibt nervige warnungen, wenn man die sehen will... viel spass
+
+\ExplSyntaxOn
+\keys_define:nn { titlepage }
+{
+    organization .tl_set:N  = \l__titlepage_organization_tl,
+    title  .tl_set:N  = \l__titlepage_title_tl,
+    type .tl_set:N  = \l__titlepage_type_tl,
+    faculty .tl_set:N  = \l__titlepage_faculty_tl,
+    author  .tl_set:N  = \l__titlepage_author_tl,
+    street  .tl_set:N = \l__titlepage_street_tl,
+    city  .tl_set:N = \l__titlepage_city_tl,
+    email .tl_set:N = \l__titlepage_email_tl,
+    place .tl_set:N  = \l__titlepage_place_tl,
+    date .tl_set:N  = \l__titlepage_date_tl,
+    examiner .tl_set:N  = \l__titlepage_examiner_tl,
+    module .tl_set:N = \l__titlepage_module_tl,
+    timeperiod .tl_set:N = \l__titlepage_timeperiod_tl,
+}
+\NewDocumentCommand { \makeTitlePage } { +m }
+{
+    \group_begin:
+    \keys_set:nn { titlepage } { #1 }
+    \title{\l__titlepage_title_tl}
+    \author{\l__titlepage_author_tl}
+    \date{\l__titlepage_date_tl}
+    \begin{titlepage}
+        
+        \begin{center}
+            {\Huge  \l__titlepage_title_tl }\\[3cm] 
+            {\Large \textbf{\l__titlepage_type_tl}}\\[3cm]
+        \end{center}
+        \raggedleft
+        \begin{tabularx}{\textwidth}{ X  X  }
+            Verfasser:        & \l__titlepage_author_tl         \\[1em]
+                              & \l__titlepage_street_tl         \\[1em]
+                              & \l__titlepage_city_tl           \\[1em]
+                              & \l__titlepage_email_tl          \\[4em]
+            Dozent/-in:       & \l__titlepage_examiner_tl       \\[1em]
+            Modul:            & \l__titlepage_module_tl         \\[1em]
+            Organisation:     & \l__titlepage_organization_tl   \\[4em]
+            Bearbeitungszeitraum: & \l__titlepage_timeperiod_tl \\[3cm]
+        \end{tabularx}
+        \centering
+        \par \hlAnormal \l__titlepage_place_tl,~\l__titlepage_date_tl
+    \end{titlepage}
+    \group_end:
+}
+\ExplSyntaxOff
+
+\setstretch{1.5}
